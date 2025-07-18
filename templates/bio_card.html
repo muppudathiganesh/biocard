@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}Bio Card{% endblock %}
+
+{% block content %}
+<h2>Bio Card</h2>
+<div class="card">
+    <h3>{{ name }}</h3>
+    <p>Age: {{ age }}</p>
+    <h4>Hobbies:</h4>
+    {% if hobbies %}
+        <ul>
+        {% for hobby in hobbies %}
+            <li>{{ hobby }}</li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No hobbies listed.</p>
+    {% endif %}
+</div>
+<a href="/">Back to Form</a>
+{% endblock %}
